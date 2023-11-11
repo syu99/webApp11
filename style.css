@@ -468,6 +468,11 @@ strong{
         width: 60%;
         margin: 35px 30px 100px;
     }
+
+    #imageContainer{
+        margin: 150px 30px 150px;
+    }
+
     .titlestrong{
         color: #1D1D1F;
         font-size: 40px;
