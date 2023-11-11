@@ -1,0 +1,509 @@
+/* Styles pour la mise en page de base */
+
+
+*{
+    font-family: SF Pro Display, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    
+
+    
+}
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+  }
+  
+  /** Thin */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+  }
+  
+  /** Regular */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+  
+  /** Medium */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+  }
+  
+  /** Semi Bold */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+  }
+  
+  /** Bold */ 
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+  }
+@font-face {
+    font-family: "Poppins";
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+  }
+
+  @import url('https://v1.fontapi.ir/css/SFProDisplay');
+
+
+
+
+
+
+/* Styles pour le header */
+header {
+    background-color: #F5F5F7; /* Couleur d'arrière-plan du header */
+    color: #1d1d1f;
+    height: 55px;
+    
+}
+
+/* Styles pour le logo et la navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Styles pour le menu déroulant sur les petits écrans */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #363636;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Styles pour la liste de navigation */
+.nav-list {
+    display: flex;
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+}
+#logo{
+    height: 50px;
+    width: 50px;
+   
+}
+
+
+/*************************************/
+
+#mainBkg {
+    width: 100%;
+    height: 20em;
+    background-color: aqua;
+    background-image: url("./assets/bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 90px;
+    flex-direction: column;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8); /* Ajouter cette ligne pour l'ombre */
+}
+
+
+#apropos{
+ 
+background-color: #F5F5F7;
+   color: rgb(34, 34, 34);
+   font-size: 40px;
+   height: 100%;
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 155px 30px 100px;
+
+  
+   
+}
+.btn-contact {
+    display: flex;
+    width: 101px;
+    height: 52px;
+    border-radius: 980px;
+    background-color: #0071E3;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-items: center;
+    margin: 10px auto; /* Ajoutez cette ligne pour centrer verticalement et horizontalement */
+    justify-content: center; /* Ajoutez cette ligne pour centrer horizontalement */
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  
+  .btn-contact:hover {
+    background-color: #3a3a3a;
+  }
+  
+#cequenousfaisons{
+background-color: #F5F5F7;
+font-size: 40px;
+height: 100%;
+width: 60%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin: 155px 30px 100px;
+}
+
+#notremission{
+    font-size: 40px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 155px 30px 100px;
+}
+
+#noushoisir{
+
+    background-color: rgb(255, 255, 255);
+    font-size: 22px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 155px 30px 100px;
+  
+}
+
+#contacteznous{
+    font-size: 40px;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 155px 30px 100px;
+}
+
+/* Styles pour les sections principales */
+section {
+    padding: 20px;
+}
+
+/* Styles pour les liens */
+a {
+    color: #241010; /* Couleur des liens en blanc */
+}
+
+/* Styles spécifiques à la section "Conditions Générales de Vente" */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Styles pour le footer */
+footer {
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styles spécifiques à la section "À propos" */
+main{
+    background-color: #F5F5F7;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Aligner le texte à gauche */
+    line-height: 1.5; /* Aérer le texte en augmentant l'espacement entre les lignes */
+}
+
+
+#imageContainer {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
+
+    /* Ajoutez ces propriétés pour masquer la barre de défilement par défaut */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#imageContainer::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement pour les navigateurs basés sur WebKit (Chrome, Safari, etc.) */
+}
+
+.image {
+    display: inline-block;
+    width: 300px; /* Ajustez la largeur de vos images selon vos besoins */
+    height: 200px; /* Ajustez la hauteur de vos images selon vos besoins */
+    margin-right: 10px; /* Ajoute un espacement entre les images */
+}
+
+
+
+
+/* Menu toggle */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styles spécifiques pour les écrans de petite taille (mobile) */
+@media (max-width: 767px) {
+    header {
+        padding: 5px; /* Réduire le rembourrage du header */
+    }
+    
+    nav ul li {
+        margin-bottom: 5px; /* Réduire l'espace entre les éléments de la liste de navigation */
+    }
+    
+    section {
+        padding: 10px; /* Réduire le rembourrage des sections */
+    }
+}
+
+/* Styles spécifiques pour les écrans de petite taille (iPhone 12 Pro) */
+@media (max-width: 390px) {
+    body {
+        font-size: 20px; /* Réduire la taille de la police pour les petits écrans */
+    }
+
+    #mainBkg {
+        width: 100%;
+        height: 225px;
+        background-color: aqua;
+        
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        line-height: 28px;
+        flex-direction: column;
+        padding-bottom: 15px;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8); /* Ajouter cette ligne pour l'ombre */
+    }
+strong{
+    color: #1D1D1F;
+}
+
+    #apropos {
+        background-color: #F5F5F7;
+        color: #6E6E73;
+        font-size: 19px;
+        font-weight: 600;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        text-align: start; /* Ajoutez cette ligne pour justifier le texte */
+        margin: 35px 30px 100px;
+    }
+    #apropos h2 {
+        text-align: center; /* Ajoutez cette ligne pour centrer le titre h2 */
+    }
+
+  .btn-contact {
+    display: flex;
+    width: 81px;
+    height: 32px;
+    border-radius: 980px;
+    background-color: #0071E3;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-items: center;
+    margin: 10px auto; /* Ajoutez cette ligne pour centrer verticalement et horizontalement */
+    justify-content: center; /* Ajoutez cette ligne pour centrer horizontalement */
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+}
+
+      
+      .btn-contact:hover {
+        background-color: #3a3a3a;
+      }
+      
+    #cequenousfaisons{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        font-size: 19px;
+        font-weight: 600;
+        color: #6E6E73;
+    background-color: #F5F5F7;
+        height: 100%;
+        width: 60%;
+        margin: 35px 30px 100px;
+    }
+    
+    #notremission{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 19px;
+        font-weight: 600;
+        color: #6E6E73;
+        height: 100%;
+        width: 60%;
+        margin: 35px 30px 100px;
+    }
+    
+    #noushoisir{
+    
+        background-color: rgb(255, 255, 255);
+        font-size: 17px;
+        font-weight: 600;
+        color: #6E6E73;
+        margin: 35px 30px 100px;
+    }
+    
+    #contacteznous{
+
+     display: flex;
+        flex-direction: column;
+        text-align: start;
+        font-size: 19px;
+        font-weight: 600;
+        color: #6E6E73;
+    background-color: #F5F5F7;
+        height: 100%;
+        width: 60%;
+        margin: 35px 30px 100px;
+    }
+    .titlestrong{
+        color: #1D1D1F;
+        font-size: 40px;
+    }
+
+    .nav-list {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-list ul {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-bottom: 5px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .bar {
+        height: 2px;
+        width: 20px;
+        margin: 4px 0;
+    }
+    #noushoisir{
+
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        width: 95%;
+    }
+
+   
+}
