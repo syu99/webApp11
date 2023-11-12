@@ -30,3 +30,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Utilisez setTimeout au lieu de setInterval pour éviter des problèmes de synchronisation
   setInterval(nextSlide, 3000); // Changez la valeur à votre préférence (3000 ms = 3 secondes)
 });
+
+// Ajoutez ces lignes dans votre script.js
+
+document.addEventListener("scroll", function() {
+  var header = document.querySelector(".scroll-header");
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+      header.classList.add("fixed");
+  } else {
+      header.classList.remove("fixed");
+  }
+});

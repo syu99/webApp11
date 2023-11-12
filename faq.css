@@ -2,15 +2,24 @@
 @import url('https://v1.fontapi.ir/css/SFProDisplay');
 
 *{
-    font-family: SF Pro Display, sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F5F5F7; /* Couleur d'arrière-plan du header */
+    background-color: #F5F5F7;
     color: #1d1d1f;
 
 }
 
+/* Ajoutez ces styles pour rendre la barre de navigation fixe en haut */
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #F5F5F7; /* Ajoutez la couleur d'arrière-plan souhaitée */
+  }
+  
 /* Styles pour le header */
 header {
   background-color: #F5F5F7; /* Couleur d'arrière-plan du header */
@@ -76,6 +85,10 @@ body {
 
 }
 
+body.fixed-header-padding {
+    padding-top: 55px; /* Assurez-vous d'ajuster cette valeur en fonction de la hauteur de votre barre de navigation */
+  }
+
 .container {
   max-width: 80%;
   margin: 0 auto;
@@ -93,3 +106,10 @@ body {
 .faq-question p {
   text-align: left;
 }
+
+header {
+    background-color: #F5F5F7;
+    color: #1d1d1f;
+    height: 55px;
+    transition: 0.3s ease-in-out;
+  }
