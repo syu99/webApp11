@@ -10,6 +10,64 @@
     color: #1d1d1f;
 
 }
+
+/* Styles pour le header */
+header {
+  background-color: #F5F5F7; /* Couleur d'arrière-plan du header */
+  color: #1d1d1f;
+  height: 55px;
+  
+}
+
+/* Styles pour le logo et la navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Styles pour le menu déroulant sur les petits écrans */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #363636;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Styles pour la liste de navigation */
+.nav-list {
+  display: flex;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+}
+#logo{
+  height: 40px;
+  width: 30px;
+  padding-bottom: 10px;
+ 
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
