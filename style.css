@@ -8,11 +8,7 @@
     box-sizing: border-box;
 
 }
-body {
-    
 
-    
-}
 /** Ultra Light */
 @font-face {
     font-family: "San Francisco";
@@ -247,6 +243,52 @@ margin: 350px 30px 100px;
     margin: 350px 30px 100px;
   
 }
+.card{
+    width: 346px;
+    height: 665px;
+    border-radius: 15px;
+    background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 80px;
+    
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .slider-container {
+    width: 80%; /* Ajustez la largeur du conteneur du slider selon vos besoins */
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .cards-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .card {
+    width: 346px;
+    height: 665px;
+    border-radius: 15px;
+    background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 80px;
+    margin: auto; /* Ajoutez cette ligne pour centrer la carte horizontalement et verticalement */
+}
+
+
+  
 
 #contacteznous{
     font-size: 40px;

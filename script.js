@@ -13,45 +13,66 @@ document.addEventListener('DOMContentLoaded', function () {
       currentSlide = 0;
     }
 
-    slides[currentSlide].style.display = "flex"; // Changez 'block' à 'flex'
+    slides[currentSlide].style.display = "flex";
     slides[previousSlide].style.display = "none";
 
     previousSlide = currentSlide;
   }
 
-  // Utilisez setTimeout au lieu de setInterval pour éviter les problèmes de synchronisation
-  setInterval(nextSlide, 2500);
+  setInterval(nextSlide, 2710);
 
-  // Ajoutez ces lignes pour vous assurer que la première diapositive est affichée initialement
   slides[currentSlide].style.display = "flex";
   slides[previousSlide].style.display = "none";
-});
 
-// ... (votre code existant)
-
-document.getElementById("logo").addEventListener("click", function() {
-  window.location.href = "index.html"; // Ajustez le chemin vers votre page d'accueil
-});
-
-// ... (votre code existant)
-
-
-document.getElementById("logo").addEventListener("click", function() {
-  window.location.href = "/";
-});
-document.getElementById("logo").addEventListener("mouseover", function() {
-    document.getElementById("logo").classList.add("cursor-hand");
-});
-
-
-const links = document.querySelectorAll("nav li");
-
-icons.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
+  document.getElementById("logo").addEventListener("click", function() {
+    window.location.href = "index.html";
   });
+
+  document.getElementById("logo").addEventListener("mouseover", function() {
+      document.getElementById("logo").classList.add("cursor-hand");
+  });
+
+  const links = document.querySelectorAll("nav li");
+
+  icons.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+
+  const cardsContainer = document.querySelector('.cards-container');
+  const cardWidth = document.querySelector('.card').offsetWidth;
+  let currentIndex = 0;
+
+  function showNextCard() {
+    currentIndex++;
+    if (currentIndex >= cardsContainer.children.length) {
+      currentIndex = 0;
+    }
+    updateSliderPosition();
+  }
+
+  function showPreviousCard() {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = cardsContainer.children.length - 1;
+    }
+    updateSliderPosition();
+  }
+
+  function updateSliderPosition() {
+    const newPosition = -currentIndex * cardWidth;
+    cardsContainer.style.transform = `translateX(${newPosition}px)`;
+  }
+
+  // Utilisez les boutons "Next" et "Previous" pour déclencher le défilement
+  const nextButton = document.getElementById('next');
+  const prevButton = document.getElementById('prev');
+
+  nextButton.addEventListener('click', showNextCard);
+  prevButton.addEventListener('click', showPreviousCard);
 });
