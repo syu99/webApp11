@@ -49,3 +49,23 @@ document.addEventListener("scroll", function() {
       header.classList.remove("fixed");
   }
 });
+
+document.getElementById("logo").addEventListener("click", function() {
+  window.location.href = "/";
+});
+document.getElementById("logo").addEventListener("mouseover", function() {
+    document.getElementById("logo").classList.add("cursor-hand");
+});
+
+
+const links = document.querySelectorAll("nav li");
+
+icons.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});

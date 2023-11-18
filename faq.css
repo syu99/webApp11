@@ -6,64 +6,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F5F5F7;
     color: #1d1d1f;
 
 }
 
-/* Ajoutez ces styles pour rendre la barre de navigation fixe en haut */
-.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #F5F5F7; /* Ajoutez la couleur d'arrière-plan souhaitée */
-  }
-  
-/* Styles pour le header */
-header {
-  background-color: #F5F5F7; /* Couleur d'arrière-plan du header */
-  color: #1d1d1f;
-  height: 55px;
-  
+/* Styles pour la navbar */
+
+#logo {
+  height: 40px;
+  width: 30px;
+  padding-bottom: 10px;
+}
+.cursor-hand {
+  cursor: pointer;
 }
 
-/* Styles pour le logo et la navigation */
-.navbar {
+
+a,
+a:visited{
+  color: #241010; /* Couleur des liens en blanc */
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover{
+  color:#0071E3;
+  transition: 0.2s;
+  font-weight: bolder;
+}
+li{
+  list-style: none;
+}
+nav {
+  background: skyblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  font-size: calc(0.6rem + 0.8vw);
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
 }
 
-/* Styles pour le menu déroulant sur les petits écrans */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
+#icons{
   cursor: pointer;
+  display: none;
+
 }
 
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: #363636;
-  margin: 6px 0;
-  transition: 0.4s;
+@media(max-width:650px){
+  #icons {
+      display: block;
+  }
+  #icons:before {
+      content: "\2630";
+  }
+  .active #icons:before{
+      content: "\2715";
+  }
+
+
+  nav ul {
+      position:fixed;
+      left:-100%;
+      top: 5%;
+      flex-direction: column;;
+       background: skyblue;
+       width: 100%;
+       text-align: center;
+       transition: 0.25s;
+}
+nav li{
+  padding: 3px 0;
+}
+nav li:hover {
+  background: rgb(157, 217, 240) ;
 }
 
-/* Styles pour la liste de navigation */
-.nav-list {
-  display: flex;
+nav.active ul {
+  left:0;
 }
 
-.nav-list ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-}
-
-.nav-list li {
-  margin-right: 20px;
 }
 
 #logo-container {
@@ -78,16 +103,13 @@ header {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
 
 }
 
-body.fixed-header-padding {
-    padding-top: 55px; /* Assurez-vous d'ajuster cette valeur en fonction de la hauteur de votre barre de navigation */
-  }
+
 
 .container {
   max-width: 80%;
@@ -107,9 +129,3 @@ body.fixed-header-padding {
   text-align: left;
 }
 
-header {
-    background-color: #F5F5F7;
-    color: #1d1d1f;
-    height: 55px;
-    transition: 0.3s ease-in-out;
-  }
