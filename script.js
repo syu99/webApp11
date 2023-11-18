@@ -1,22 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const mobileMenuButton = document.getElementById('mobile-menu');
-  const navList = document.querySelector('.nav-list');
-
-  console.log(mobileMenuButton); // Vérifiez si l'élément du bouton mobile existe
-  console.log(navList); // Vérifiez si l'élément de la liste de navigation existe
-
-  mobileMenuButton.addEventListener('click', function () {
-      console.log('Mobile menu button clicked'); // Ajoutez un journal de console pour le débogage
-      navList.classList.toggle('show');
-  });
-
-
+  // ... (votre code existant)
 
   var carousel = document.querySelector("#carousel");
   var slides = carousel.querySelectorAll(".slide");
 
   var currentSlide = 0;
-  var previousSlide = slides.length - 1; // Modifiez cette ligne pour résoudre le problème de la première diapositive
+  var previousSlide = slides.length - 1;
 
   function nextSlide() {
     currentSlide++;
@@ -24,31 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
       currentSlide = 0;
     }
 
-    slides[currentSlide].style.display = "block";
+    slides[currentSlide].style.display = "flex"; // Changez 'block' à 'flex'
     slides[previousSlide].style.display = "none";
 
     previousSlide = currentSlide;
   }
 
-  // Lancez la première transition
-  nextSlide();
+  // Utilisez setTimeout au lieu de setInterval pour éviter les problèmes de synchronisation
+  setInterval(nextSlide, 2500);
 
-  // Utilisez setTimeout au lieu de setInterval pour éviter des problèmes de synchronisation
-  setInterval(nextSlide, 3000); // Changez la valeur à votre préférence (3000 ms = 3 secondes)
+  // Ajoutez ces lignes pour vous assurer que la première diapositive est affichée initialement
+  slides[currentSlide].style.display = "flex";
+  slides[previousSlide].style.display = "none";
 });
 
-// Ajoutez ces lignes dans votre script.js
+// ... (votre code existant)
 
-document.addEventListener("scroll", function() {
-  var header = document.querySelector(".scroll-header");
-  var scrollPosition = window.scrollY;
-
-  if (scrollPosition > 0) {
-      header.classList.add("fixed");
-  } else {
-      header.classList.remove("fixed");
-  }
+document.getElementById("logo").addEventListener("click", function() {
+  window.location.href = "index.html"; // Ajustez le chemin vers votre page d'accueil
 });
+
+// ... (votre code existant)
+
 
 document.getElementById("logo").addEventListener("click", function() {
   window.location.href = "/";
