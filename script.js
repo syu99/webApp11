@@ -2,9 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const mobileMenuButton = document.getElementById('mobile-menu');
   const navList = document.querySelector('.nav-list');
 
+  console.log(mobileMenuButton); // Vérifiez si l'élément du bouton mobile existe
+  console.log(navList); // Vérifiez si l'élément de la liste de navigation existe
+
   mobileMenuButton.addEventListener('click', function () {
-    navList.classList.toggle('show');
+      console.log('Mobile menu button clicked'); // Ajoutez un journal de console pour le débogage
+      navList.classList.toggle('show');
   });
+
+
 
   var carousel = document.querySelector("#carousel");
   var slides = carousel.querySelectorAll(".slide");
