@@ -69,8 +69,8 @@ nav {
 }
 
 #logo {
-    height: 40px;
-    width: 30px;
+    height: 50px;
+    width: 40px;
     padding-bottom: 10px;
 }
 
@@ -105,8 +105,10 @@ nav ul {
     display: none;
 }
 
+/*********650px*********************************************************************/
 @media (max-width: 650px) {
     #icons {
+       
         display: block;
         cursor: pointer;
     }
@@ -117,6 +119,7 @@ nav ul {
 
     .active #icons:before {
         content: "\2715";
+        
     }
 
     nav ul {
@@ -248,39 +251,24 @@ margin: 350px 30px 100px;
     margin: 350px 30px 100px;
   
 }
-.card{
-    width: 346px;
-    height: 665px;
-    border-radius: 15px;
-    background: skyblue;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 80px;
-    
-
-}
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
   
-  .slider-container {
-    width: 80%; /* Ajustez la largeur du conteneur du slider selon vos besoins */
-    overflow: hidden;
-    margin: 20px auto;
-    position: relative;
-  }
+
   
   .cards-container {
+   
     display: flex;
     transition: transform 0.5s ease-in-out;
     align-items: center;
     flex-direction: row;
-  }
-  
-  .card {
+    gap:20px;
+}
+
+.card {
     width: 346px;
     height: 665px;
     border-radius: 15px;
@@ -293,7 +281,14 @@ body {
 }
 
 
-  
+#prev{
+    display: none;
+   
+}
+#next{
+    display: none;
+    
+        }
 
 #contacteznous{
     font-size: 40px;
@@ -320,6 +315,7 @@ label {
 
 /* Styles pour le footer */
 footer {
+    width: 100%;
     background-color: skyblue;
     color: #fff;
     text-align: center;
@@ -327,10 +323,12 @@ footer {
     font-size: x-large;
     padding-bottom: 35px;
     padding-top: 35px;
+
 }
 
 /* Styles spécifiques à la section "À propos" */
 main{
+
     background-color: #F5F5F7;
     display: flex;
     width: 100%;
@@ -355,9 +353,11 @@ main{
 
 .image {
     display: inline-block;
-    width: 300px; /* Ajustez la largeur de vos images selon vos besoins */
-    height: 200px; /* Ajustez la hauteur de vos images selon vos besoins */
+    width: 400px; /* Ajustez la largeur de vos images selon vos besoins */
+    height: 300px; /* Ajustez la hauteur de vos images selon vos besoins */
     margin-right: 10px; /* Ajoute un espacement entre les images */
+    margin-top: 170px;
+    margin-bottom: 170px;
 }
 
 
@@ -381,6 +381,7 @@ main{
     }
 
     .card {
+       height: 30em;
         width: 100%; /* Remettez la largeur à sa valeur d'origine si nécessaire */
         margin: 0 10px; /* Ajoutez de la marge entre les cartes */
     }
@@ -388,7 +389,16 @@ main{
         font-size: 20px; /* Réduire la taille de la police pour les petits écrans */
     }
 
+    #btncontainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 10%;
+    }
     #prev{
+        
+display: block;
 background-color: #0071e3;
 color: 	white;
 border-radius: 980px;
@@ -406,6 +416,7 @@ padding-top: 3px;
 padding-bottom: 3px;
     }
     #next{
+        display: block;
         background-color: #0071e3;
         color: 	white;
 border-radius: 980px;
@@ -425,7 +436,7 @@ padding-bottom: 3px;
 
     #mainBkg {
         width: 100%;
-        height: 225px;
+        height: 25em;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -458,6 +469,12 @@ strong{
         margin: 143px 143px 35px;    }
     #apropos h2 {
         text-align: center; /* Ajoutez cette ligne pour centrer le titre h2 */
+    }
+
+    #btnapropos{
+        
+        display: flex;
+        gap:26px
     }
 
   .btn-contact {
@@ -502,7 +519,8 @@ strong{
     background-color: #F5F5F7;
         height: 100%;
         width: 60%;
-        margin: 143px 143px 35px;    }
+        margin: 143px 143px 35px; 
+    margin-top: 200px;   }
     
     #notremission{
     display: flex;
@@ -535,7 +553,8 @@ strong{
     background-color: #F5F5F7;
         height: 100%;
         width: 60%;
-        margin: 143px 143px 35px;
+        margin: 243px 143px 35px;
+        margin-top: 350px;
     }
 
     #imageContainer{
@@ -595,4 +614,5 @@ transition: opacity 2.5s ease; /* Ajoutez cette ligne pour une transition douce 
   
 .caroutitle{
     font-size: 35px;
+    
 }

@@ -11,8 +11,8 @@
 
 </head>
 <body>
+  
   <div class="container">
-    
     
     <nav id="nav">
           
@@ -59,10 +59,19 @@
 
           
         </div>
-        
-        <button class="btn-contact">
-          Contact
+
+        <div id="btnapropos">
+
+          <button class="btn-contact" onclick="scrollToSection('contacts')">
+            Contact
         </button>
+        
+        <button class="btn-contact" onclick="scrollToSection('tarifs')">
+            Tarifs
+        </button>
+
+        </div>
+        
 
 
         <div id="cequenousfaisons">
@@ -141,8 +150,8 @@
         <p>Rédaction de 10 devis/factures,</p>
         <p>Tarif à la page (2EUR) <br>par modification</p>
         <p><strong>(120 EUR/mois)</strong></p>
-
       </div>
+
       </div>
     </div>
 
@@ -199,3 +208,16 @@
 </body>
 </html>
 
+<script>
+  function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+          section.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+          });
+      }
+  }
+</script>
