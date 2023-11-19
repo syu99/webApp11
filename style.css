@@ -59,31 +59,6 @@
 
 
 /* Styles pour la navbar */
-
-#logo {
-    height: 40px;
-    width: 30px;
-    padding-bottom: 10px;
-}
-.cursor-hand {
-    cursor: pointer;
-}
-
-
-a,
-a:visited{
-    color: #241010; /* Couleur des liens en blanc */
-    text-decoration: none;
-    text-transform: uppercase;
-}
-a:hover{
-    color:#0071E3;
-    transition: 0.2s;
-    font-weight: bolder;
-}
-li{
-    list-style: none;
-}
 nav {
     background: skyblue;
     display: flex;
@@ -92,63 +67,82 @@ nav {
     padding: 10px;
     font-size: calc(0.6rem + 0.8vw);
 }
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
+
+#logo {
+    height: 40px;
+    width: 30px;
+    padding-bottom: 10px;
 }
 
-#icons{
+.cursor-hand {
     cursor: pointer;
-    display: none;
-
 }
 
-@media(max-width:650px){
-    .cards-container {
-        flex-direction: column; /* Affichez les cartes en colonne plutôt qu'en ligne */
-        align-items: center; /* Centrez les cartes horizontalement */
-      }
-    
-      .card {
-        width: 80%; /* Ajustez la largeur de la carte pour mieux s'adapter à l'écran mobile */
-        margin: 10px auto; /* Ajoutez de la marge pour séparer les cartes */
-      }
-    }
-    
+a,
+a:visited {
+    color: #241010;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: #0071e3;
+    transition: 0.2s;
+    font-weight: bolder;
+}
+
+li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#icons {
+    display: none;
+}
+
+@media (max-width: 650px) {
     #icons {
         display: block;
+        cursor: pointer;
     }
+
     #icons:before {
         content: "\2630";
     }
-    .active #icons:before{
+
+    .active #icons:before {
         content: "\2715";
     }
 
-
     nav ul {
-        position:fixed;
-        left:-100%;
+        position: fixed;
+        left: -100%;
         top: 5%;
-        flex-direction: column;;
-         background: skyblue;
-         width: 100%;
-         text-align: center;
-         transition: 0.25s;
-}
-nav li{
-    padding: 3px 0;
-}
-nav li:hover {
-    background: rgb(157, 217, 240) ;
-}
+        flex-direction: column;
+        background: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
 
-nav.active ul {
-    left:0;
+    nav li {
+        padding: 3px 0;
+    }
+
+    nav li:hover {
+        background: rgb(157, 217, 240);
+    }
+
+    nav.active ul {
+        left: 0;
+    }
+
 }
-
-
 /*********main*****************************************************************************************************************************************************************************/
 
 
