@@ -105,6 +105,17 @@ nav ul{
 }
 
 @media(max-width:650px){
+    .cards-container {
+        flex-direction: column; /* Affichez les cartes en colonne plutôt qu'en ligne */
+        align-items: center; /* Centrez les cartes horizontalement */
+      }
+    
+      .card {
+        width: 80%; /* Ajustez la largeur de la carte pour mieux s'adapter à l'écran mobile */
+        margin: 10px auto; /* Ajoutez de la marge pour séparer les cartes */
+      }
+    }
+    
     #icons {
         display: block;
     }
@@ -137,7 +148,7 @@ nav.active ul {
     left:0;
 }
 
-}
+
 /*********main*****************************************************************************************************************************************************************************/
 
 
@@ -356,7 +367,26 @@ main{
 /*****************************************************************************************************************************************************************************************/
 
 /* Styles spécifiques pour les écrans de petite taille (iPhone 12 Pro) */
+
+
+
 @media (max-width: 390px) {
+
+    .slider-container {
+        width: 100%; /* Ajustez la largeur du conteneur du slider selon vos besoins */
+        overflow: hidden;
+        position: relative;
+        margin: 143px 143px 35px; 
+      }
+    .cards-container {
+        flex-direction: row; /* Gardez les cartes alignées horizontalement même sur les petits écrans */
+        flex-wrap: nowrap; /* Empêchez le passage à la ligne des cartes */
+    }
+
+    .card {
+        width: 100%; /* Remettez la largeur à sa valeur d'origine si nécessaire */
+        margin: 0 10px; /* Ajoutez de la marge entre les cartes */
+    }
     body {
         font-size: 20px; /* Réduire la taille de la police pour les petits écrans */
     }
