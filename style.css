@@ -184,6 +184,11 @@ background-color: #F5F5F7;
   
    
 }
+
+#mainbtn{
+    display: flex;
+    gap : 30px;
+}
 .btn-contact {
     display: flex;
     width: 101px;
@@ -265,12 +270,12 @@ body {
     transition: transform 0.5s ease-in-out;
     align-items: center;
     flex-direction: row;
-    gap:20px;
+    gap:30px;
 }
 
 .card {
     width: 346px;
-    height: 665px;
+    height: 765px;
     border-radius: 15px;
     background: skyblue;
     display: flex;
@@ -343,7 +348,6 @@ main{
     width: 100%;
     overflow-x: auto;
     white-space: nowrap; /* Empêche le retour à la ligne des éléments enfants */
-
     /* Ajoutez ces propriétés pour masquer la barre de défilement par défaut */
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -357,7 +361,7 @@ main{
     height: 300px; /* Ajustez la hauteur de vos images selon vos besoins */
     margin-right: 10px; /* Ajoute un espacement entre les images */
     margin-top: 170px;
-    margin-bottom: 170px;
+   
 }
 
 
@@ -373,7 +377,7 @@ main{
         width: 100%; /* Ajustez la largeur du conteneur du slider selon vos besoins */
         overflow: hidden;
         position: relative;
-        margin: 143px 143px 35px; 
+        margin: 143px 8px 30px; 
       }
     .cards-container {
         flex-direction: row; /* Gardez les cartes alignées horizontalement même sur les petits écrans */
@@ -381,9 +385,10 @@ main{
     }
 
     .card {
-       height: 30em;
+       height: 40em;
         width: 100%; /* Remettez la largeur à sa valeur d'origine si nécessaire */
-        margin: 0 10px; /* Ajoutez de la marge entre les cartes */
+        /* Ajoutez de la marge entre les cartes */
+        font-size: 17px;
     }
     body {
         font-size: 20px; /* Réduire la taille de la police pour les petits écrans */
@@ -394,7 +399,7 @@ main{
         justify-content: center;
         flex-direction: row;
         align-items: center;
-        gap: 10%;
+        gap: 30px;
     }
     #prev{
         
@@ -466,7 +471,7 @@ strong{
         display: flex;
         flex-direction: column;
         text-align: start; /* Ajoutez cette ligne pour justifier le texte */
-        margin: 143px 143px 35px;    }
+        margin: 143px 8px 30px;   }
     #apropos h2 {
         text-align: center; /* Ajoutez cette ligne pour centrer le titre h2 */
     }
@@ -474,7 +479,7 @@ strong{
     #btnapropos{
         
         display: flex;
-        gap:26px
+        gap:30px
     }
 
   .btn-contact {
@@ -519,7 +524,7 @@ strong{
     background-color: #F5F5F7;
         height: 100%;
         width: 60%;
-        margin: 143px 143px 35px; 
+        margin: 173px 8px 143px; 
     margin-top: 200px;   }
     
     #notremission{
@@ -531,7 +536,7 @@ strong{
         color: #6E6E73;
         height: 100%;
         width: 60%;
-        margin: 143px 143px 35px;    }
+        margin: 143px 8px 143px   }
     
     #noushoisir{
     
@@ -539,27 +544,30 @@ strong{
         font-size: 17px;
         font-weight: 600;
         color: #6E6E73;
-        margin: 143px 143px 35px;
+        margin: 143px 8px 143px
     }
     
     #contacteznous{
 
-     display: flex;
+        display: flex;
         flex-direction: column;
         text-align: start;
         font-size: 19px;
-        font-weight: 600;
-        color: #6E6E73;
-    background-color: #F5F5F7;
-        height: 100%;
-        width: 60%;
-        margin: 243px 143px 35px;
-        margin-top: 350px;
+            font-weight: 600;
+            color: #6E6E73;
+            height: 100%;
+            width: 60%;
+            margin: 173px 8px 143px   }
+      
     }
 
     #imageContainer{
-        margin: 143px 143px 35px;
+        margin: 143px 8px 143px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
+
+    
 
     .titlestrong{
         color: #1D1D1F;
@@ -585,7 +593,7 @@ strong{
     }
 
    
-}
+
 
 #carousel {
     width: 60%;
@@ -593,7 +601,7 @@ strong{
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
-    margin: 143px 143px 35px; 
+    margin: 143px 8px 143px; 
  }
   
   .slide {
@@ -615,4 +623,9 @@ transition: opacity 2.5s ease; /* Ajoutez cette ligne pour une transition douce 
 .caroutitle{
     font-size: 35px;
     
+}
+
+#cardx{
+    background-color: #F5F5F7;
+    width: 8px;
 }
